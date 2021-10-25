@@ -1,0 +1,16 @@
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.exe
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.deps.json
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.runtimeconfig.json
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.runtimeconfig.dev.json
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.dll
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\ref\KataBank.dll
+C:\Users\ugobe\KataBank\bin\Debug\net5.0\KataBank.pdb
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.csproj.AssemblyReference.cache
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.AssemblyInfoInputs.cache
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.AssemblyInfo.cs
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.csproj.CoreCompileInputs.cache
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.dll
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\ref\KataBank.dll
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.pdb
+C:\Users\ugobe\KataBank\obj\Debug\net5.0\KataBank.genruntimeconfig.cache
