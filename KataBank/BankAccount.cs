@@ -1,34 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace KataBank
 {
-    class BankAccount
+    public class BankAccount
     {
-        private List<Operation> operations = new List<Operation>();
+        public List<Operation> Operations { get; }
 
-        public BankAccount() {}
-
-        public void addOperation(Operation operation)
+        public BankAccount()
         {
-            operations.Add(operation);
+            Operations = new List<Operation>();
         }
 
-        public List<Operation> getOperations()
+        public void AddOperation(Operation operation)
         {
-            return operations;
+            Operations.Add(operation);
         }
 
-        public List<int> getAccountBalance()
+        public List<int> GetAccountBalance()
         {
             List<int> balances = new List<int>();
 
-            for (int i = 0; i < operations.Count; i++)
+            for (int i = 0; i < Operations.Count; i++)
             {
-                if (operations[i].getOperationType() == "WITHDRAW")
-                    balances.Add(-1 * operations[i].getAmount());
+                if (Operations[i].OperationType == "WITHDRAW")
+                    balances.Add(-1 * Operations[i].Amount);
                 else
-                    balances.Add(operations[i].getAmount());
+                    balances.Add(Operations[i].Amount);
             }
             return balances;
         }

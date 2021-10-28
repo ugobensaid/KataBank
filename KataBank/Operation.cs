@@ -2,52 +2,24 @@
 
 namespace KataBank
 {
-    class Operation
+    public class Operation
     {
-        private int amount;
-        private string dateTime;
-        private string operationType;
+        public DateTime OperationDate { get; }
+
+        public int Amount { get; }
+        public string OperationType { get; }
 
         public Operation(int amount, string operationType)
         {
-            this.amount = amount;
-            this.dateTime = getCurrentDateTime();
-            this.operationType = operationType;
+            Amount = amount;
+            OperationDate = DateTime.Now;
+            OperationType = operationType;
         }
 
-        public string getOperationInfos()
+        /*public string GetOperationInfos()
         {
-            return String.Format(" {0}{1} | {2} | {3}{4} |", operationType, printSpaces(operationType), 
-                dateTime, amount, printSpaces(amount));
-        }
-
-        public int getAmount()
-        {
-            return amount;
-        }
-
-        public string getOperationType()
-        {
-            return operationType;
-        }
-
-        private static string getCurrentDateTime()
-        {
-            return DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-        }
-
-        private static string printSpaces(object elem)
-        {
-            int elemLength = elem.ToString().Length;
-
-            string spaces = "";
-
-            for (int i = 0; i <= 8 - elemLength; i++)
-            {
-                spaces += " ";
-            }
-
-            return spaces;
-        }
+            return String.Format(" {0}{1} | {2} | {3}{4} |", OperationType, Printer.PrintSpaces(OperationType),
+                OperationDate.ToString("dd:MM:yyy HH:mm:ss"), Amount, Printer.PrintSpaces(Amount));
+        }*/
     }
 }
