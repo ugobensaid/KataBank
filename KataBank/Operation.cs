@@ -15,11 +15,5 @@ namespace KataBank
             OperationDate = DateTime.Now;
             OperationType = operationType;
         }
-
-        /*public string GetOperationInfos()
-        {
-            return String.Format(" {0}{1} | {2} | {3}{4} |", OperationType, Printer.PrintSpaces(OperationType),
-                OperationDate.ToString("dd:MM:yyy HH:mm:ss"), Amount, Printer.PrintSpaces(Amount));
-        }*/
     }
 }

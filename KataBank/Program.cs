@@ -6,12 +6,14 @@ namespace KataBank
     {
         static void Main(string[] args)
         {
-            Client.Deposit(2500);
+            Client client = new Client(new BankAccount());
+
+            client.Deposit(2500);
             Thread.Sleep(1000);
-            Client.Withdraw(500);
+            client.Withdraw(500);
             Thread.Sleep(1000);
-            Client.Deposit(50);
-            Printer.PrintAccountStatement();
+            client.Deposit(50);
+            Printer.PrintAccountStatement(client);
         }
     }
 }

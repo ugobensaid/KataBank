@@ -1,15 +1,20 @@
 ﻿namespace KataBank
 {
-    public static class Client
+    public class Client
     {
-        public static BankAccount Account = new BankAccount();
+        public BankAccount Account { get; }
 
-        public static void Deposit(int amount)
+        public Client(BankAccount account)
+        {
+            Account = account;
+        }
+
+        virtual public void Deposit(int amount)
         {
             Account.AddOperation(new Operation(amount, "DEPOSIT"));
         }
 
-        public static void Withdraw(int amount)
+        virtual public void Withdraw(int amount)
         {
              Account.AddOperation(new Operation(amount, "WITHDRAW"));
         }

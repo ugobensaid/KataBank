@@ -104,3 +104,5 @@ C:\Users\ugobe\KataBankTests\obj\Debug\net5.0\KataBankTests.dll
 C:\Users\ugobe\KataBankTests\obj\Debug\net5.0\ref\KataBankTests.dll
 C:\Users\ugobe\KataBankTests\obj\Debug\net5.0\KataBankTests.pdb
 C:\Users\ugobe\KataBankTests\obj\Debug\net5.0\KataBankTests.genruntimeconfig.cache
+C:\Users\ugobe\KataBankTests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\ugobe\KataBankTests\bin\Debug\net5.0\Moq.dll

@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using KataBank;
+using Moq;
 
 namespace KataBankTests
 {
@@ -7,27 +8,41 @@ namespace KataBankTests
     public class BankAccountTests
     {
         [TestMethod]
-        public void addOperationSuccessTest()
+        public void verifyOperationInListTest()
         {
-            BankAccount account = new BankAccount();
-            Operation expected = new Operation(100, "DEPOSIT");
+            Mock<BankAccount> bankAccountMock = new Mock<BankAccount>();
+            Client client = new Client(bankAccountMock.Object);
 
-            account.addOperation(expected);
+            client.Deposit(200);
+            client.Withdraw(100);
+            client.Deposit(50);
 
-            Operation actual = account.getOperations()[0];
-            Assert.AreEqual(expected, actual);
+            int numberOfOperations = client.Account.Operations.Count;
+            Assert.AreEqual(3, numberOfOperations);
         }
 
         [TestMethod]
-        public void addOperationFailedTest()
+        public void addOperationAmountSuccessTest()
         {
-            BankAccount account = new BankAccount();
-            Operation expected = new Operation(100, "DEPOSIT");
+            Mock<BankAccount> bankAccountMock = new Mock<BankAccount>();
+            Client client = new Client(bankAccountMock.Object);
 
-            account.addOperation(new Operation(200, "WITHDRAW"));
+            client.Deposit(100);
 
-            Operation actual = account.getOperations()[0];
-            Assert.AreNotEqual(expected, actual);
+            int operationAmount = client.Account.Operations[0].Amount;
+            Assert.AreEqual(100, operationAmount);
+        }
+
+        [TestMethod]
+        public void addOperationTypeSuccessTest()
+        {
+            Mock<BankAccount> bankAccountMock = new Mock<BankAccount>();
+            Client client = new Client(bankAccountMock.Object);
+
+            client.Deposit(100);
+
+            string operationType = client.Account.Operations[0].OperationType;
+            Assert.AreEqual(operationType, "DEPOSIT");
         }
     }
 }

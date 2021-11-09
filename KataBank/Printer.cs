@@ -5,10 +5,10 @@ namespace KataBank
 {
     public static class Printer
     {
-        public static void PrintAccountStatement()
+        public static void PrintAccountStatement(Client client)
         {
-            List<Operation> operations = Client.Account.Operations;
-            List<int> balances = Client.Account.GetAccountBalance();
+            List<Operation> operations = client.Account.Operations;
+            List<int> balances = client.Account.GetAccountBalance();
             int balance = 0;
 
             Console.WriteLine(" Operation  | Date and time       | Amount     | Balance    \n" +
@@ -17,7 +17,7 @@ namespace KataBank
             {
                 balance += balances[i];
                 Console.WriteLine(String.Format(" {0} {1} | {2} | {3} {4} | {5}", operations[i].OperationType, 
-                    printSpaces(operations[i].OperationType), operations[i].OperationDate.ToString("dd:MM:yyy HH:mm:ss"), 
+                    printSpaces(operations[i].OperationType), operations[i].OperationDate.ToString("dd/MM/yyyy HH:mm:ss"),
                     operations[i].Amount, printSpaces(operations[i].Amount), balance));
             }
         }
